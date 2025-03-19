@@ -11,6 +11,15 @@ const Bookshelf = () => {
         author: '',
     });
 
+    // first event handler:
+    const handleInputChange = (event) => {
+        // triggered every time the user types in an input field
+        // use setter to update the state of (a copy of the object) newBook: update the value event.target.name to event.target.value
+        setNewBook({ ...newBook, [event.target.name]: event.target.value })
+    };
+
+    // second event handler:
+
     return (
 
         <div className="bookshelfDiv">
