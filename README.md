@@ -1,12 +1,11 @@
-# React + Vite
+# Controlled Forms in React Lab
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to Reactville, a constantly evolving virtual metropolis. Let’s build this digital town together, one component at a time.
 
-Currently, two official plugins are available:
+The local library is adding a feature to its website where users can add their favorite books to a virtual bookshelf. In this lab, you will help build the front-end UI to make it happen!
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+You will develop a single component named BookShelf that contains both the controlled form and the display of the bookshelf. Using the useState hook, you will manage the form inputs and list of books, enabling real-time updates to the UI based on user input.
 
-## Expanding the ESLint configuration
+By the end of this lab, you’ll have a functional application where users can add books to a personalized bookshelf, with each new entry updating the display immediately—no page reloads required!
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[GA GitHub lab](https://pages.git.generalassemb.ly/modular-curriculum-all-courses/controlled-forms-in-react-lab/canvas-landing-pages/seb.html)
