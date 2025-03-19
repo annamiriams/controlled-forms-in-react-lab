@@ -4,6 +4,13 @@ import { useState } from 'react';
 
 const Bookshelf = () => {
 
+    // state variables
+    const [books, setBooks] = useState([]);
+    const [newBook, setNewBook] = useState({
+        title: '',
+        author: '',
+    });
+
     return (
 
         <div className="bookshelfDiv">
