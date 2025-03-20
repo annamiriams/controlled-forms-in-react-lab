@@ -60,7 +60,7 @@ const Bookshelf = () => {
                         />
                     </div>
                 {/* submit button */}
-
+                    <button type='submit'>Submit</button>
                 </form>
             </div>
             <div className="bookCardsDiv">{/* Book cards will display here */}</div>
