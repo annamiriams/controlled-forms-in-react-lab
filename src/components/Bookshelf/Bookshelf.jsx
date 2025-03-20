@@ -50,7 +50,15 @@ const Bookshelf = () => {
                     </div>
 
                 {/* add field for author */}
-                    
+                    <div>
+                        <label htmlFor="author">Author: </label>
+                        <input
+                            id="author"
+                            name="author"
+                            value={newBook.author}
+                            onChange={handleInputChange}
+                        />
+                    </div>
                 {/* submit button */}
 
                 </form>
