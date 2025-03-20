@@ -19,6 +19,15 @@ const Bookshelf = () => {
     };
 
     // second event handler:
+    const handleSubmit = (event) => {
+        // preventDefault behavior so page doesn't refresh every time a form is submitted
+        event.preventDefault();
+        setBooks({ ...books, newBook });
+        setNewBook({
+            title: '',
+            author: '',
+        });
+    };
 
     return (
 
