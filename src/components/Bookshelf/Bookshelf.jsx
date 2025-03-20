@@ -22,7 +22,8 @@ const Bookshelf = () => {
     const handleSubmit = (event) => {
         // preventDefault behavior so page doesn't refresh every time a form is submitted
         event.preventDefault();
-        setBooks({ ...books, newBook });
+        // console.log('book added');
+        setBooks([ ...books, newBook ]);
         setNewBook({
             title: '',
             author: '',
@@ -30,42 +31,57 @@ const Bookshelf = () => {
     };
 
     return (
+        <>
+            <div className="bookshelfDiv">
+                <div className="formDiv">
+                    <h3>Add a Book</h3>
 
-        <div className="bookshelfDiv">
-            <div className="formDiv">
-                <h3>Add a Book</h3>
+                    {/* Form will go here */}
+                    <form onSubmit={handleSubmit}>
 
-                {/* Form will go here */}
-                <form onSubmit={handleSubmit}>
+                        {/* add field for title */}
+                        <div>
+                            <label htmlFor="title">Title: </label>
+                            <input type="text"
+                                id="title"
+                                name="title"
+                                value={newBook.title}
+                                onChange={handleInputChange}
+                            />
+                        </div>
 
-                {/* add field for title */}
-                    <div>
-                        <label htmlFor="title">Title: </label>
-                        <input type="text" 
-                            id="title"
-                            name="title"
-                            value={newBook.title}
-                            onChange={handleInputChange}
-                        />
-                    </div>
+                        {/* add field for author */}
+                        <div>
+                            <label htmlFor="author">Author: </label>
+                            <input
+                                id="author"
+                                name="author"
+                                value={newBook.author}
+                                onChange={handleInputChange}
+                            />
+                        </div>
+                        {/* submit button */}
+                        <button type='submit'>Submit</button>
+                    </form>
+                </div>
 
-                {/* add field for author */}
-                    <div>
-                        <label htmlFor="author">Author: </label>
-                        <input
-                            id="author"
-                            name="author"
-                            value={newBook.author}
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                {/* submit button */}
-                    <button type='submit'>Submit</button>
-                </form>
+                {/* use map() to iterate over the books array */}
+                {/* each book should be contained in a 'book card' (wrap the title and author in a div) */}
+                {/* for each book, include title and author */}
+
+                <div className="bookCardsDiv">{/* Book cards will display here */}
+                    <ul >
+                        {books.map((book, index) => (
+                            <li className='bookCard' key={index}>
+                                <h4>{book.title}</h4>
+                                {book.author}
+                            </li>
+                        ))}
+                    </ul>
+                </div>
+
             </div>
-            <div className="bookCardsDiv">{/* Book cards will display here */}</div>
-        </div>
-
+        </>
     );
 
 };
