@@ -34,7 +34,26 @@ const Bookshelf = () => {
         <div className="bookshelfDiv">
             <div className="formDiv">
                 <h3>Add a Book</h3>
+
                 {/* Form will go here */}
+                <form onSubmit={handleSubmit}>
+
+                {/* add field for title */}
+                    <div>
+                        <label htmlFor="title">Title: </label>
+                        <input type="text" 
+                            id="title"
+                            name="title"
+                            value={newBook.title}
+                            onChange={handleInputChange}
+                        />
+                    </div>
+
+                {/* add field for author */}
+                    
+                {/* submit button */}
+
+                </form>
             </div>
             <div className="bookCardsDiv">{/* Book cards will display here */}</div>
         </div>
